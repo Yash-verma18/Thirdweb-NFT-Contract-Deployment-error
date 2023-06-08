@@ -1,5 +1,10 @@
-import '@/styles/globals.css'
+import "@/styles/globals.css";
+import { GlobalAppProvider } from "@/wrappers/GlobalAppProvider";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function NFTPublishingApp({ Component, pageProps }) {
+  return (
+    <GlobalAppProvider>
+      <Component {...pageProps} />
+    </GlobalAppProvider>
+  );
 }
